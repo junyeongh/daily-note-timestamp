@@ -18,6 +18,38 @@
 					"TitleAlignment": "middle"
 				}
 			]
+		},
+		{
+			"Name": "Time stamp to a file",
+			"UUID": "com.junyeongh.daily-note-timestamp.time-stamp-file",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Displays a count, which increments by one on press.",
+			"PropertyInspectorPath": "ui/time-stamp-file.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Time interval to a file",
+			"UUID": "com.junyeongh.daily-note-timestamp.time-interval-file",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Displays a count, which increments by one on press.",
+			"PropertyInspectorPath": "ui/time-interval-file.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
 		}
 	],
 	"Category": "Daily Note Timestamp",
