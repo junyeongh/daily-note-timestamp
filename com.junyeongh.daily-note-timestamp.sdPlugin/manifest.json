@@ -1,68 +1,64 @@
 {
-	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
-	"Name": "Daily Note Timestamp",
-	"Version": "0.1.0.0",
-	"Author": "Junyeong Heo",
-	"Actions": [
-		{
-			"Name": "Time stamp to a file",
-			"UUID": "com.junyeongh.daily-note-timestamp.time-stamp-file",
-			"Icon": "imgs/actions/counter/icon",
-			"Tooltip": "Displays a count, which increments by one on press.",
-			"PropertyInspectorPath": "ui/time-stamp-file.html",
-			"Controllers": [
-				"Keypad"
-			],
-			"States": [
-				{
-					"Image": "imgs/actions/counter/key",
-					"TitleAlignment": "middle"
-				}
-			]
-		},
-		{
-			"Name": "Time interval to a file",
-			"UUID": "com.junyeongh.daily-note-timestamp.time-interval-file",
-			"Icon": "imgs/actions/counter/icon",
-			"Tooltip": "Displays a count, which increments by one on press.",
-			"PropertyInspectorPath": "ui/time-interval-file.html",
-			"Controllers": [
-				"Keypad"
-			],
-			"States": [
-				{
-					"Image": "imgs/actions/counter/key",
-					"TitleAlignment": "middle"
-				},
-				{
-					"Image": "imgs/actions/counter/key",
-					"TitleAlignment": "middle"
-				}
-			]
-		}
-	],
-	"Category": "Daily Note Timestamp",
-	"CategoryIcon": "imgs/plugin/category-icon",
-	"CodePath": "bin/plugin.js",
-	"Description": "Timestamps to Daily Notes",
-	"Icon": "imgs/plugin/marketplace",
-	"SDKVersion": 2,
-	"Software": {
-		"MinimumVersion": "6.4"
-	},
-	"OS": [
-		{
-			"Platform": "mac",
-			"MinimumVersion": "12"
-		},
-		{
-			"Platform": "windows",
-			"MinimumVersion": "10"
-		}
-	],
-	"Nodejs": {
-		"Version": "20",
-		"Debug": "enabled"
-	},
-	"UUID": "com.junyeongh.daily-note-timestamp"
+    "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+    "Name": "Daily Note Timestamp",
+    "Version": "0.1.0.0",
+    "Author": "Junyeong Heo",
+    "Actions": [
+        {
+            "Name": "Time stamp to a file",
+            "UUID": "com.junyeongh.daily-note-timestamp.time-stamp-file",
+            "Icon": "imgs/actions/counter/icon",
+            "Tooltip": "Displays a count, which increments by one on press.",
+            "PropertyInspectorPath": "ui/time-stamp-file.html",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/counter/key",
+                    "TitleAlignment": "middle"
+                }
+            ]
+        },
+        {
+            "Name": "Time interval to a file",
+            "UUID": "com.junyeongh.daily-note-timestamp.time-interval-file",
+            "Icon": "imgs/actions/counter/icon",
+            "Tooltip": "Displays a count, which increments by one on press.",
+            "PropertyInspectorPath": "ui/time-interval-file.html",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/counter/key",
+                    "TitleAlignment": "middle"
+                },
+                {
+                    "Image": "imgs/actions/counter/key",
+                    "TitleAlignment": "middle"
+                }
+            ]
+        }
+    ],
+    "Category": "Daily Note Timestamp",
+    "CategoryIcon": "imgs/plugin/category-icon",
+    "CodePath": "bin/plugin.js",
+    "Description": "Timestamps to Daily Notes",
+    "Icon": "imgs/plugin/marketplace",
+    "SDKVersion": 2,
+    "Software": {
+        "MinimumVersion": "6.4"
+    },
+    "OS": [
+        {
+            "Platform": "mac",
+            "MinimumVersion": "12"
+        },
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ],
+    "Nodejs": {
+        "Version": "20",
+        "Debug": "enabled"
+    },
+    "UUID": "com.junyeongh.daily-note-timestamp"
 }

@@ -29,29 +29,27 @@ Output, for example, at the end of the file selected
 ## Random emoji and Passphrase
 
 ```js
+// https://www.npmjs.com/package/generate-passphrase
+import { generateMultiple } from "generate-passphrase";
+
 // https://gist.github.com/ikr7/c72843556ef3a12014c3
-var emojis = [
-  '😄','😃','😀','😊',
-];
+var emojis = ["😄", "😃", "😀", "😊"];
 console.log(emojis[Math.floor(Math.random() * emojis.length)]);
 
-// https://www.npmjs.com/package/generate-passphrase
-import { generateMultiple } from 'generate-passphrase'
-
 const passphrase = generateMultiple(5, {
-    length: 2,
-    numbers: false,
+  length: 2,
+  numbers: false,
 });
 console.log(passphrase);
 
 // output
 [
-  'maximation-affaire',
-  'snuffiness-ostial',
-  'incompossible-staymakers',
-  'virilizes-salamis',
-  'departmentalizes-ultrarespectable'
-]
+  "maximation-affaire",
+  "snuffiness-ostial",
+  "incompossible-staymakers",
+  "virilizes-salamis",
+  "departmentalizes-ultrarespectable",
+];
 ```
 
 🎨, 🐠, 🌑, 🌎, 😘

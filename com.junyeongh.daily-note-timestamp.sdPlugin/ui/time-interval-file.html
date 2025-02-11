@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head lang="en">
+  <head lang="en">
     <title>Time interval file Settings</title>
     <meta charset="utf-8" />
     <script src="https://sdpi-components.dev/releases/v3/sdpi-components.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <sdpi-item label="File">
-        <sdpi-file setting="filename" accept="text/plain,.txt,.md"></sdpi-file>
+      <sdpi-file setting="filename" accept="text/plain,.txt,.md"></sdpi-file>
     </sdpi-item>
     <sdpi-item label="Options">
-        <sdpi-checkbox-list setting="options" columns="2">
-            <option default="true" value="add_emoji" value-type="boolean">Add Emoji</option>
-            <option default="true" value="add_passphrase" value-type="boolean">Add passphrase</option>
-        </sdpi-checkbox-list>
+      <sdpi-checkbox-list setting="options" columns="2">
+        <option default="true" value="add_emoji" value-type="boolean">Add Emoji</option>
+        <option default="true" value="add_passphrase" value-type="boolean">Add passphrase</option>
+      </sdpi-checkbox-list>
     </sdpi-item>
     <sdpi-item label="Text">
-        <sdpi-textfield setting="optional_text"></sdpi-textfield>
+      <sdpi-textfield setting="optional_text"></sdpi-textfield>
     </sdpi-item>
-</body>
-
+  </body>
 </html>
