@@ -4,6 +4,7 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import path from "node:path";
 import url from "node:url";
+import copy from "rollup-plugin-copy";
 
 const isWatching = !!process.env.ROLLUP_WATCH;
 const sdPlugin = "com.junyeongh.daily-note-timestamp.sdPlugin";
@@ -36,6 +37,15 @@ const config = {
 			preferBuiltins: true
 		}),
 		commonjs(),
+		copy({
+            targets: [
+                {
+                    // Adjust the path if the file is located elsewhere in node_modules
+                    src: 'node_modules/generate-passphrase/dist/words.txt',
+                    dest: `${sdPlugin}/bin`
+                }
+            ]
+        }),
 		!isWatching && terser(),
 		{
 			name: "emit-module-package-file",
