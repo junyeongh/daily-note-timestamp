@@ -9,10 +9,16 @@
 
 <body>
     <sdpi-item label="File">
-        <sdpi-file setting="avatar" accept="text/plain,.txt,.md"></sdpi-file>
+        <sdpi-file setting="filename" accept="text/plain,.txt,.md"></sdpi-file>
+    </sdpi-item>
+    <sdpi-item label="Options">
+        <sdpi-checkbox-list setting="options" columns="2">
+            <option default="true" value="add_emoji" value-type="boolean">Add Emoji</option>
+            <option default="true" value="add_passphrase" value-type="boolean">Add passphrase</option>
+        </sdpi-checkbox-list>
     </sdpi-item>
     <sdpi-item label="Text">
-        <sdpi-textfield></sdpi-textfield>
+        <sdpi-textfield setting="optional_text"></sdpi-textfield>
     </sdpi-item>
 </body>
 

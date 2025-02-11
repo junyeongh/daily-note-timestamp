@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
 	"Name": "Daily Note Timestamp",
 	"Version": "0.1.0.0",
 	"Author": "Junyeong Heo",
@@ -29,6 +30,10 @@
 				"Keypad"
 			],
 			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				},
 				{
 					"Image": "imgs/actions/counter/key",
 					"TitleAlignment": "middle"
