@@ -49,6 +49,7 @@ or
 Appends a single timestamp entry with optional emoji and passphrase.
 
 Format:
+
 ```markdown
 - [b] `{timestamp}` {emoji?} {passphrase?} {text?}
 ```
@@ -58,6 +59,7 @@ Format:
 Appends a time interval entry with optional emoji and passphrase.
 
 Format:
+
 ```markdown
 - ["] `{timestamp}` 🔜 {emoji?} {passphrase?} {text?}
 - ["] `{timestamp}` 🔚 {emoji?} {passphrase?} {text?}
