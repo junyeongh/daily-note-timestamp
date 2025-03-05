@@ -18,12 +18,15 @@ Output, for example, at the end of the file selected:
 - Support for both single timestamps and time intervals
   - [x] for a specific file
   - [ ] for a daily note
+    - [Directory Picker Request · Issue #82 · elgatosf/streamdeck](https://github.com/elgatosf/streamdeck/issues/82)
 - Append timestamps in various formats
-  - e.g., 2025-02-08 12:53 AM (UTC +08:00)
-    - [x] full_date: YYYY-MM-DD hh:mm A (UTC Z)
-    - [ ] date_only: YYYY-MM-DD
-    - [ ] time_only: hh:mm A (UTC Z)
-- Notification toast
+  - [ ] by changing to 'radio' component (currently full_date by default)
+    - e.g., 2025-02-08 12:53 AM (UTC +08:00)
+      - full_date: YYYY-MM-DD hh:mm A (UTC Z)
+      - date_only: YYYY-MM-DD
+      - time_only: hh:mm A (UTC Z)
+- OS default notification toast
+  - [ ] Windows
 
 For example,
 

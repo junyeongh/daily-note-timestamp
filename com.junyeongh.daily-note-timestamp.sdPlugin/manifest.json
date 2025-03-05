@@ -28,11 +28,11 @@
             "States": [
                 {
                     "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
+                    "TitleAlignment": "bottom"
                 },
                 {
                     "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
+                    "TitleAlignment": "bottom"
                 }
             ]
         }
