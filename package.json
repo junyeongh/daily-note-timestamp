@@ -2,8 +2,8 @@
     "scripts": {
         "build": "rollup -c",
         "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.junyeongh.daily-note-timestamp\"",
-        "format": "npx prettier . --write",
-        "format:check": "npx prettier . --check"
+        "format": "pnpm biome check --write",
+        "format:check": "pnpm biome check"
     },
     "type": "module",
     "devDependencies": {

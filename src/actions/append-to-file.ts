@@ -1,13 +1,13 @@
-import { action, JsonObject, KeyDownEvent, SingletonAction, WillAppearEvent } from "@elgato/streamdeck";
+import { type PathOrFileDescriptor, appendFile } from "node:fs";
+import { type JsonObject, type KeyDownEvent, SingletonAction, action } from "@elgato/streamdeck";
 import dayjs from "dayjs";
-import { appendFile, PathOrFileDescriptor } from "fs";
 import { random_values } from "../lib/utils";
 
 @action({ UUID: "com.junyeongh.daily-note-timestamp.time-stamp-file" })
 export class AppendTimestampToFile extends SingletonAction<TimestampSettings> {
-  private emoji: string = "";
-  private passphrase: string = "";
-  private text: string = "";
+  private emoji = "";
+  private passphrase = "";
+  private text = "";
 
   override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
     const { settings } = ev.payload;
@@ -24,7 +24,7 @@ export class AppendTimestampToFile extends SingletonAction<TimestampSettings> {
     this.text = settings.optional_text as string;
 
     // e.g., - [b] `{timestamp}` {emoji?} {passphrase?} {text?}
-    const result = `\n- [b] ${timestamp}${add_emoji ? " " + this.emoji : ""}${add_password ? " " + this.passphrase : ""} ${this.text}`;
+    const result = `\n- [b] ${timestamp}${add_emoji ? ` ${this.emoji}` : ""}${add_password ? ` ${this.passphrase}` : ""} ${this.text}`;
     appendFile(settings.filename as PathOrFileDescriptor, result, (err) => {
       if (err) {
         ev.action.showAlert();
@@ -39,7 +39,7 @@ export class AppendTimestampToFile extends SingletonAction<TimestampSettings> {
 export class AppendTimeintervalToFile extends SingletonAction<TimestampSettings> {
   private emoji: string;
   private passphrase: string;
-  private text: string = "";
+  private text = "";
 
   constructor() {
     super();
@@ -61,7 +61,7 @@ export class AppendTimeintervalToFile extends SingletonAction<TimestampSettings>
     // e.g.,
     // - ["] `{timestamp}` 🔜 {emoji?}{passphrase?} {text?}
     // - ["] `{timestamp}` 🔚 {emoji?}{passphrase?} {text?}
-    const result = `\n- ["] ${timestamp} ${state === 0 ? "🔜" : "🔚"}${add_emoji ? " " + this.emoji : ""}${add_password ? " " + this.passphrase : ""} ${this.text}`;
+    const result = `\n- ["] ${timestamp} ${state === 0 ? "🔜" : "🔚"}${add_emoji ? ` ${this.emoji}` : ""}${add_password ? ` ${this.passphrase}` : ""} ${this.text}`;
 
     appendFile(settings.filename as PathOrFileDescriptor, result, (err) => {
       if (err) {
