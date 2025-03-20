@@ -5,9 +5,17 @@ import { random_values } from "../lib/utils";
 
 @action({ UUID: "com.junyeongh.daily-note-timestamp.time-stamp-file" })
 export class AppendTimestampToFile extends SingletonAction<TimestampSettings> {
-  private emoji = "";
-  private passphrase = "";
-  private text = "";
+  private emoji: string;
+  private passphrase: string;
+  private text: string;
+
+  constructor() {
+    super();
+
+    this.emoji = "";
+    this.passphrase = "";
+    this.text = "";
+  }
 
   override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
     const { settings } = ev.payload;
@@ -39,7 +47,7 @@ export class AppendTimestampToFile extends SingletonAction<TimestampSettings> {
 export class AppendTimeintervalToFile extends SingletonAction<TimestampSettings> {
   private emoji: string;
   private passphrase: string;
-  private text = "";
+  private text: string;
 
   constructor() {
     super();
@@ -47,6 +55,7 @@ export class AppendTimeintervalToFile extends SingletonAction<TimestampSettings>
     const { emoji, passphrase } = random_values();
     this.emoji = emoji;
     this.passphrase = passphrase;
+    this.text = "";
   }
 
   override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
@@ -58,11 +67,11 @@ export class AppendTimeintervalToFile extends SingletonAction<TimestampSettings>
     const [add_emoji, add_password] = settings.options as [boolean, boolean];
     // optional text from text field
     this.text = settings.optional_text as string;
+
     // e.g.,
     // - ["] `{timestamp}` 🔜 {emoji?}{passphrase?} {text?}
     // - ["] `{timestamp}` 🔚 {emoji?}{passphrase?} {text?}
     const result = `\n- ["] ${timestamp} ${state === 0 ? "🔜" : "🔚"}${add_emoji ? ` ${this.emoji}` : ""}${add_password ? ` ${this.passphrase}` : ""} ${this.text}`;
-
     appendFile(settings.filename as PathOrFileDescriptor, result, (err) => {
       if (err) {
         ev.action.showAlert();
