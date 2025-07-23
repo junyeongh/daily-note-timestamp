@@ -23,10 +23,12 @@ Output, for example, at the end of the file selected:
   - [ ] by changing to 'radio' component (currently full_date by default)
     - e.g., 2025-02-08 12:53 AM (UTC +08:00)
       - full_date: YYYY-MM-DD hh:mm A (UTC Z)
-      - date_only: YYYY-MM-DD
       - time_only: hh:mm A (UTC Z)
 - OS default notification toast
   - [ ] Windows
+  - [ ] Mac OS (currently unavailable)
+- Pomodoro feature with start/pause and reset tracking
+  - [ ] Pomodoro functionality
 
 For example,
 
