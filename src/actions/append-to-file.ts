@@ -1,5 +1,10 @@
-import { type PathOrFileDescriptor, appendFile } from "node:fs";
-import { type JsonObject, type KeyDownEvent, SingletonAction, action } from "@elgato/streamdeck";
+import { appendFile, type PathOrFileDescriptor } from "node:fs";
+import {
+  action,
+  type JsonObject,
+  type KeyDownEvent,
+  SingletonAction,
+} from "@elgato/streamdeck";
 import dayjs from "dayjs";
 import { random_values } from "../lib/utils";
 

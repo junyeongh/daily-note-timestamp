@@ -18,7 +18,9 @@ const config = {
     file: `${sdPlugin}/bin/plugin.js`,
     sourcemap: isWatching,
     sourcemapPathTransform: (relativeSourcePath, sourcemapPath) => {
-      return url.pathToFileURL(path.resolve(path.dirname(sourcemapPath), relativeSourcePath)).href;
+      return url.pathToFileURL(
+        path.resolve(path.dirname(sourcemapPath), relativeSourcePath),
+      ).href;
     },
   },
   plugins: [
@@ -50,7 +52,11 @@ const config = {
     {
       name: "emit-module-package-file",
       generateBundle() {
-        this.emitFile({ fileName: "package.json", source: `{ "type": "module" }`, type: "asset" });
+        this.emitFile({
+          fileName: "package.json",
+          source: `{ "type": "module" }`,
+          type: "asset",
+        });
       },
     },
   ],
